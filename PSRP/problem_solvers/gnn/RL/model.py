@@ -1,4 +1,5 @@
 from typing import Tuple
+import numpy as np
 import torch
 from torch import nn
 from PSRP.problem_solvers.gnn.RL.decoder import GraphDecoder
@@ -67,7 +68,7 @@ class IRPModel(nn.Module):
 
         normalization_coef = (env.num_nodes - env.num_depots) * env.days_count *  env.products_count
         dry_runs_loss = env.loss_dry_runs #/ normalization_coef
-
+        dry_runs_loss = np.clip(dry_runs_loss, 0, 3)
         dry_runs_loss = torch.tensor(dry_runs_loss, dtype=torch.float, device=self.device)
 
         acc_loss = acc_dist_loss - dry_runs_loss

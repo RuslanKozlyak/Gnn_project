@@ -195,26 +195,26 @@ class IRPEnv_Custom:
     def generate_mask(self):
         mask = np.zeros(shape=(self.batch_size, self.num_nodes), dtype=np.int32)
         
-        #disallow staying in cur position
+        # disallow staying in cur position
         mask[np.arange(self.batch_size)[:, None], self.current_location] = 1
 
-        #disallow staying in nodes with max capacity
+        # disallow staying in nodes with max capacity
         filled_nodes = np.all(self.init_capacities == self.max_capacities, axis=2)
         mask[filled_nodes] |= 1
         
-        #disallow visit node if not anought time to reach it
+        # disallow visit node if not anought time to reach it
         not_enough_time = self.possible_action_time >= self.cur_remaining_time[:,None]
         mask[not_enough_time] |= 1
 
-        #go to base if empty
+        # go to base if empty
         empty_loads = np.where(np.all(self.temp_load <= 0.0, axis=1))[0]
         mask[empty_loads] |= 1
 
-        #go to base if all nodes filled
+        # go to base if all nodes filled
         all_filled = np.where(np.all(self.init_capacities == self.max_capacities, axis=1))[0]
         mask[all_filled] |= 1
 
-        # allow staying on a depot if the graph is solved.
+        # force staying on a depot if the graph is solved.
         done_graphs = np.where(self.cur_day == self.days_count)[0]
         mask[done_graphs] = 1
         
