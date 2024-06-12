@@ -1,0 +1,1194 @@
+[
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "sysconfig",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sysconfig",
+        "description": "sysconfig",
+        "detail": "sysconfig",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "pyplot",
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "isExtraImport": true,
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "networkx",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "networkx",
+        "description": "networkx",
+        "detail": "networkx",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deepcopy",
+        "importPath": "copy",
+        "description": "copy",
+        "isExtraImport": true,
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.colors",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.colors",
+        "description": "matplotlib.colors",
+        "detail": "matplotlib.colors",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "nn",
+        "importPath": "torch",
+        "description": "torch",
+        "isExtraImport": true,
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "IRPModel",
+        "importPath": "PSRP.problem_solvers.gnn.RL.model",
+        "description": "PSRP.problem_solvers.gnn.RL.model",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.gnn.RL.model",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn.functional",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn.functional",
+        "description": "torch.nn.functional",
+        "detail": "torch.nn.functional",
+        "documentation": {}
+    },
+    {
+        "label": "Categorical",
+        "importPath": "torch.distributions.categorical",
+        "description": "torch.distributions.categorical",
+        "isExtraImport": true,
+        "detail": "torch.distributions.categorical",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "importPath": "matplotlib.pylab",
+        "description": "matplotlib.pylab",
+        "isExtraImport": true,
+        "detail": "matplotlib.pylab",
+        "documentation": {}
+    },
+    {
+        "label": "GraphDecoder",
+        "importPath": "PSRP.problem_solvers.gnn.RL.decoder",
+        "description": "PSRP.problem_solvers.gnn.RL.decoder",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.gnn.RL.decoder",
+        "documentation": {}
+    },
+    {
+        "label": "GraphDemandEncoder",
+        "importPath": "PSRP.problem_solvers.gnn.RL.encoder",
+        "description": "PSRP.problem_solvers.gnn.RL.encoder",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.gnn.RL.encoder",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "IRPEnv_Custom",
+        "importPath": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "description": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "documentation": {}
+    },
+    {
+        "label": "IRPEnv_Custom",
+        "importPath": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "description": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "documentation": {}
+    },
+    {
+        "label": "DataBuilder_MPPSRP_Simple",
+        "importPath": "PSRP.data_generators.DataBuilder_MPPSRP_Simple",
+        "description": "PSRP.data_generators.DataBuilder_MPPSRP_Simple",
+        "isExtraImport": true,
+        "detail": "PSRP.data_generators.DataBuilder_MPPSRP_Simple",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "importPath": "PSRP.utils",
+        "description": "PSRP.utils",
+        "isExtraImport": true,
+        "detail": "PSRP.utils",
+        "documentation": {}
+    },
+    {
+        "label": "save",
+        "importPath": "PSRP.utils",
+        "description": "PSRP.utils",
+        "isExtraImport": true,
+        "detail": "PSRP.utils",
+        "documentation": {}
+    },
+    {
+        "label": "save",
+        "importPath": "PSRP.utils",
+        "description": "PSRP.utils",
+        "isExtraImport": true,
+        "detail": "PSRP.utils",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "importPath": "PSRP.utils",
+        "description": "PSRP.utils",
+        "isExtraImport": true,
+        "detail": "PSRP.utils",
+        "documentation": {}
+    },
+    {
+        "label": "GraphGenerator",
+        "importPath": "PSRP.data_generators.GraphGenerator",
+        "description": "PSRP.data_generators.GraphGenerator",
+        "isExtraImport": true,
+        "detail": "PSRP.data_generators.GraphGenerator",
+        "documentation": {}
+    },
+    {
+        "label": "cp_model",
+        "importPath": "ortools.sat.python",
+        "description": "ortools.sat.python",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python",
+        "documentation": {}
+    },
+    {
+        "label": "cp_model",
+        "importPath": "ortools.sat.python",
+        "description": "ortools.sat.python",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python",
+        "documentation": {}
+    },
+    {
+        "label": "cp_model",
+        "importPath": "ortools.sat.python",
+        "description": "ortools.sat.python",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python",
+        "documentation": {}
+    },
+    {
+        "label": "Task_MPPSRP_CPSAT",
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.Task_MPPSRP_CPSAT",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.Task_MPPSRP_CPSAT",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.Task_MPPSRP_CPSAT",
+        "documentation": {}
+    },
+    {
+        "label": "cp_model_pb2",
+        "importPath": "ortools.sat",
+        "description": "ortools.sat",
+        "isExtraImport": true,
+        "detail": "ortools.sat",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "importPath": "PSRP.problem_solvers.gnn.dataset_utils",
+        "description": "PSRP.problem_solvers.gnn.dataset_utils",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.gnn.dataset_utils",
+        "documentation": {}
+    },
+    {
+        "label": "Solution_MPPSRP_CPSAT",
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.Solution_MPPSRP_CPSAT",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.Solution_MPPSRP_CPSAT",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.Solution_MPPSRP_CPSAT",
+        "documentation": {}
+    },
+    {
+        "label": "statuses_dict",
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.utils",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.utils",
+        "isExtraImport": true,
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.utils",
+        "documentation": {}
+    },
+    {
+        "label": "UNKNOWN",
+        "importPath": "ortools.sat.python.cp_model",
+        "description": "ortools.sat.python.cp_model",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python.cp_model",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_INVALID",
+        "importPath": "ortools.sat.python.cp_model",
+        "description": "ortools.sat.python.cp_model",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python.cp_model",
+        "documentation": {}
+    },
+    {
+        "label": "FEASIBLE",
+        "importPath": "ortools.sat.python.cp_model",
+        "description": "ortools.sat.python.cp_model",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python.cp_model",
+        "documentation": {}
+    },
+    {
+        "label": "INFEASIBLE",
+        "importPath": "ortools.sat.python.cp_model",
+        "description": "ortools.sat.python.cp_model",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python.cp_model",
+        "documentation": {}
+    },
+    {
+        "label": "OPTIMAL",
+        "importPath": "ortools.sat.python.cp_model",
+        "description": "ortools.sat.python.cp_model",
+        "isExtraImport": true,
+        "detail": "ortools.sat.python.cp_model",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "Tee",
+        "kind": 6,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "class Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except IOError:\n                pass\n        tee_f.write(what)",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "CopyTo",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def CopyTo(desc, src, dest):\n    import win32api\n    import win32con\n    while 1:\n        try:\n            win32api.CopyFile(src, dest, 0)\n            return\n        except win32api.error as details:\n            if details.winerror == 5:  # access denied - user not admin.\n                raise",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "LoadSystemModule",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def LoadSystemModule(lib_dir, modname):\n    # See if this is a debug build.\n    import importlib.machinery\n    import importlib.util\n    suffix = \"_d\" if \"_d.pyd\" in importlib.machinery.EXTENSION_SUFFIXES else \"\"\n    filename = \"%s%d%d%s.dll\" % (\n        modname,\n        sys.version_info[0],\n        sys.version_info[1],\n        suffix,",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "SetPyKeyVal",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def SetPyKeyVal(key_name, value_name, value):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.CreateKey(root_key, key_name)\n        try:\n            winreg.SetValueEx(my_key, value_name, 0, winreg.REG_SZ, value)\n            if verbose:\n                print(\"-> %s\\\\%s[%s]=%r\" % (root_key_name, key_name, value_name, value))\n        finally:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "UnsetPyKeyVal",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def UnsetPyKeyVal(key_name, value_name, delete_key=False):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.OpenKey(root_key, key_name, 0, winreg.KEY_SET_VALUE)\n        try:\n            winreg.DeleteValue(my_key, value_name)\n            if verbose:\n                print(\"-> DELETE %s\\\\%s[%s]\" % (root_key_name, key_name, value_name))\n        finally:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterCOMObjects",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterCOMObjects(register=True):\n    import win32com.server.register\n    if register:\n        func = win32com.server.register.RegisterClasses\n    else:\n        func = win32com.server.register.UnregisterClasses\n    flags = {}\n    if not verbose:\n        flags[\"quiet\"] = 1\n    for module, klass_name in com_modules:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterHelpFile",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterHelpFile(register=True, lib_dir=None):\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    if register:\n        # Register the .chm help file.\n        chm_file = os.path.join(lib_dir, \"PyWin32.chm\")\n        if os.path.isfile(chm_file):\n            # This isn't recursive, so if 'Help' doesn't exist, we croak\n            SetPyKeyVal(\"Help\", None, None)\n            SetPyKeyVal(\"Help\\\\Pythonwin Reference\", None, chm_file)",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterPythonwin",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterPythonwin(register=True, lib_dir=None):\n    \"\"\"Add (or remove) Pythonwin to context menu for python scripts.\n    ??? Should probably also add Edit command for pys files also.\n    Also need to remove these keys on uninstall, but there's no function\n        like file_created to add registry entries to uninstall log ???\n    \"\"\"\n    import os\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    classes_root = get_root_hkey()",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_shortcuts_folder",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_shortcuts_folder():\n    if get_root_hkey() == winreg.HKEY_LOCAL_MACHINE:\n        try:\n            fldr = get_special_folder_path(\"CSIDL_COMMON_PROGRAMS\")\n        except OSError:\n            # No CSIDL_COMMON_PROGRAMS on this platform\n            fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")\n    else:\n        # non-admin install - always goes in this user's start menu.\n        fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_system_dir",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_system_dir():\n    import win32api  # we assume this exists.\n    try:\n        import pythoncom\n        import win32process\n        from win32com.shell import shell, shellcon\n        try:\n            if win32process.IsWow64Process():\n                return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEMX86)\n            return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEM)",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "fixup_dbi",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def fixup_dbi():\n    # We used to have a dbi.pyd with our .pyd files, but now have a .py file.\n    # If the user didn't uninstall, they will find the .pyd which will cause\n    # problems - so handle that.\n    import win32api\n    import win32con\n    pyd_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi.pyd\")\n    pyd_d_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi_d.pyd\")\n    py_name = os.path.join(os.path.dirname(win32con.__file__), \"dbi.py\")\n    for this_pyd in (pyd_name, pyd_d_name):",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def install(lib_dir):\n    import traceback\n    # The .pth file is now installed as a regular file.\n    # Create the .pth file in the site-packages dir, and use only relative paths\n    # We used to write a .pth directly to sys.prefix - clobber it.\n    if os.path.isfile(os.path.join(sys.prefix, \"pywin32.pth\")):\n        os.unlink(os.path.join(sys.prefix, \"pywin32.pth\"))\n    # The .pth may be new and therefore not loaded in this session.\n    # Setup the paths just in case.\n    for name in \"win32 win32\\\\lib Pythonwin\".split():",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "uninstall",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def uninstall(lib_dir):\n    # First ensure our system modules are loaded from pywin32_system, so\n    # we can remove the ones we copied...\n    LoadSystemModule(lib_dir, \"pywintypes\")\n    LoadSystemModule(lib_dir, \"pythoncom\")\n    try:\n        RegisterCOMObjects(False)\n    except Exception as why:\n        print(\"Failed to unregister COM objects: %s\" % (why,))\n    try:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verify_destination",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def verify_destination(location):\n    if not os.path.isdir(location):\n        raise argparse.ArgumentTypeError('Path \"{}\" does not exist!'.format(location))\n    return location\ndef main():\n    import argparse\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def main():\n    import argparse\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:\n    > python pywin32_postinstall.py -install\n    If you installed pywin32 via a .exe installer, this should be run\n    automatically after installation, but if it fails you can run it again.\n    If you installed pywin32 via PIP, you almost certainly need to run this to",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "tee_f",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "tee_f = open(os.path.join(tempfile.gettempdir(), \"pywin32_postinstall.log\"), \"w\")\nclass Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except IOError:\n                pass",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stderr",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stderr = Tee(sys.stderr)\nsys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stdout",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "com_modules",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "com_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0\n# Verbosity of output messages.",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "silent",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "silent = 0\n# Verbosity of output messages.\nverbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verbose",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "verbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created\n    is_bdist_wininst = True",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "root_key_name",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "root_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created\n    is_bdist_wininst = True\nexcept NameError:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "run_test",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "def run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()\n    result = subprocess.run(cmd, check=False, cwd=dirname)\n    print(\"*** Test script '%s' exited with %s\" % (script, result.returncode))\n    sys.stdout.flush()\n    if result.returncode:",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "find_and_run",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "def find_and_run(possible_locations, extras):\n    for maybe in possible_locations:\n        if os.path.isfile(maybe):\n            run_test(maybe, extras)\n            break\n    else:\n        raise RuntimeError(\n            \"Failed to locate a test script in one of %s\" % possible_locations\n        )\ndef main():",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "def main():\n    import argparse\n    code_directories = [this_dir] + site_packages\n    parser = argparse.ArgumentParser(\n        description=\"A script to trigger tests in all subprojects of PyWin32.\"\n    )\n    parser.add_argument(\n        \"-no-user-interaction\",\n        default=False,\n        action=\"store_true\",",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "this_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "this_dir = os.path.dirname(__file__)\nsite_packages = [\n    site.getusersitepackages(),\n] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "site_packages",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "site_packages = [\n    site.getusersitepackages(),\n] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "failures",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "DataBuilder_MPPSRP_Boyers",
+        "kind": 6,
+        "importPath": "PSRP.data_generators.DataBuilder_MPPSRP_Boyers",
+        "description": "PSRP.data_generators.DataBuilder_MPPSRP_Boyers",
+        "peekOfCode": "class DataBuilder_MPPSRP_Boyers():\n    \"\"\"\n    Builds data_model from verification data, presented by Luke Boyers in the\n    \"Optimisation methods for the multi-period petrol station replenishment problem\" (2019)\n    on page 99.\n    \"\"\"\n    def __init__(self, k_vehicles=1):\n        # Table 1: Travel distances (*1000m)\n        self.travel_distances = [\n            [0, 107, 39, 43, 82],",
+        "detail": "PSRP.data_generators.DataBuilder_MPPSRP_Boyers",
+        "documentation": {}
+    },
+    {
+        "label": "DataBuilder_MPPSRP_Simple",
+        "kind": 6,
+        "importPath": "PSRP.data_generators.DataBuilder_MPPSRP_Simple",
+        "description": "PSRP.data_generators.DataBuilder_MPPSRP_Simple",
+        "peekOfCode": "class DataBuilder_MPPSRP_Simple():\n    def __init__(self, weight_matrix,\n                 distance_multiplier=1, travel_time_multiplier=60*60,\n                 planning_horizon=7,\n                 safety_level=0.05, max_level=0.95,\n                 initial_inventory_level=0.5, tank_capacity=100,\n                 depot_service_time = 15*60, station_service_time=10*60,\n                 demand=10, products_count=5,\n                 k_vehicles=1, compartments=[5 * [20]],\n                 mean_vehicle_speed=60, vehicle_time_windows=[[9*60*60, 18*60*60]],",
+        "detail": "PSRP.data_generators.DataBuilder_MPPSRP_Simple",
+        "documentation": {}
+    },
+    {
+        "label": "GraphGenerator",
+        "kind": 6,
+        "importPath": "PSRP.data_generators.GraphGenerator",
+        "description": "PSRP.data_generators.GraphGenerator",
+        "peekOfCode": "class GraphGenerator():\n    def __init__(self):\n        pass\n    def build_graph(self, n, graph_type, layout=\"kamada-kawai\", random_seed=45):\n        g_init = None\n        if graph_type == \"ring\": g_init = nx.cycle_graph( n )\n        if graph_type == \"wheel\": g_init = nx.wheel_graph(n)\n        if graph_type == \"tree\": g_init = nx.binomial_tree( n )\n        if graph_type == \"cube\":\n            g_init = nx.grid_2d_graph( n, n )",
+        "detail": "PSRP.data_generators.GraphGenerator",
+        "documentation": {}
+    },
+    {
+        "label": "IRPAgent",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.agent",
+        "description": "PSRP.problem_solvers.gnn.RL.agent",
+        "peekOfCode": "class IRPAgent:\n    def __init__(\n        self,\n        depot_dim: int = 2,\n        node_dim: int = 5,\n        emb_dim: int = 128,\n        hidden_dim: int = 512,\n        num_attention_layers: int = 3,\n        num_heads: int = 8,\n        lr: float = 1e-4,",
+        "detail": "PSRP.problem_solvers.gnn.RL.agent",
+        "documentation": {}
+    },
+    {
+        "label": "GraphDecoder",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.decoder",
+        "description": "PSRP.problem_solvers.gnn.RL.decoder",
+        "peekOfCode": "class GraphDecoder(nn.Module):\n    def __init__(\n        self,\n        emb_dim: int = 128,\n        num_heads: int = 8,\n        v_dim: int = 128,\n        k_dim: int = 128,\n        products_count = 1,\n    ):\n        super().__init__()",
+        "detail": "PSRP.problem_solvers.gnn.RL.decoder",
+        "documentation": {}
+    },
+    {
+        "label": "GraphEncoder",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.encoder",
+        "description": "PSRP.problem_solvers.gnn.RL.encoder",
+        "peekOfCode": "class GraphEncoder(nn.Module):\n    def __init__(\n        self,\n        node_input_dim: int,\n        embedding_dim: int = 128,\n        hidden_dim: int = 512,\n        num_attention_layers: int = 3,\n        num_heads: int = 8,\n    ):\n        super().__init__()",
+        "detail": "PSRP.problem_solvers.gnn.RL.encoder",
+        "documentation": {}
+    },
+    {
+        "label": "GraphDemandEncoder",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.encoder",
+        "description": "PSRP.problem_solvers.gnn.RL.encoder",
+        "peekOfCode": "class GraphDemandEncoder(GraphEncoder):\n    def __init__(\n        self,\n        depot_input_dim: int,\n        node_input_dim: int,\n        embedding_dim: int = 128,\n        hidden_dim: int = 512,\n        num_attention_layers: int = 3,\n        num_heads: int = 8,\n    ):",
+        "detail": "PSRP.problem_solvers.gnn.RL.encoder",
+        "documentation": {}
+    },
+    {
+        "label": "BatchNorm",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.encoder",
+        "description": "PSRP.problem_solvers.gnn.RL.encoder",
+        "peekOfCode": "class BatchNorm(nn.Module):\n    def __init__(self, feature_dim):\n        super().__init__()\n        self.norm = nn.BatchNorm1d(feature_dim)\n    def forward(self, x):\n        shape = x.size()\n        return self.norm(x.view(-1, shape[-1])).view(*shape)\nclass MultiHeadAttentionLayer(nn.Module):\n    def __init__(self, embedding_dim: int, hidden_dim: int, num_heads: int):\n        super().__init__()",
+        "detail": "PSRP.problem_solvers.gnn.RL.encoder",
+        "documentation": {}
+    },
+    {
+        "label": "MultiHeadAttentionLayer",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.encoder",
+        "description": "PSRP.problem_solvers.gnn.RL.encoder",
+        "peekOfCode": "class MultiHeadAttentionLayer(nn.Module):\n    def __init__(self, embedding_dim: int, hidden_dim: int, num_heads: int):\n        super().__init__()\n        self.attention_layer = nn.MultiheadAttention(\n            embed_dim=embedding_dim, num_heads=num_heads, batch_first=True\n        )\n        self.bn1 = BatchNorm(embedding_dim)\n        self.bn2 = BatchNorm(embedding_dim)\n        self.ff = nn.Sequential(\n            nn.Linear(embedding_dim, hidden_dim),",
+        "detail": "PSRP.problem_solvers.gnn.RL.encoder",
+        "documentation": {}
+    },
+    {
+        "label": "IRPEnv_Custom",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "description": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "peekOfCode": "class IRPEnv_Custom:\n    def __init__(\n        self,\n        batch,\n        parameters_dict,\n        seed: int = 69,\n    ):\n        self.num_nodes = parameters_dict['num_nodes']\n        self.batch_size = parameters_dict['batch_size']\n        self.products_count = parameters_dict['products_count']",
+        "detail": "PSRP.problem_solvers.gnn.RL.envipoment",
+        "documentation": {}
+    },
+    {
+        "label": "IRPModel",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.RL.model",
+        "description": "PSRP.problem_solvers.gnn.RL.model",
+        "peekOfCode": "class IRPModel(nn.Module):\n    def __init__(\n        self,\n        depot_dim: int,\n        node_dim: int,\n        emb_dim: int,\n        hidden_dim: int,\n        num_attention_layers: int,\n        num_heads: int,\n    ):",
+        "detail": "PSRP.problem_solvers.gnn.RL.model",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.RL.train",
+        "description": "PSRP.problem_solvers.gnn.RL.train",
+        "peekOfCode": "def train(\n        agent,\n        train_dataset,\n        parameters_dict,\n        check_point_dir: str = \"./check_points/\",\n    ):\n        epochs = parameters_dict['epochs']\n        k_vehicles = parameters_dict['k_vehicles']\n        max_trips = parameters_dict['max_trips']\n        eval_epochs = parameters_dict['eval_epochs']",
+        "detail": "PSRP.problem_solvers.gnn.RL.train",
+        "documentation": {}
+    },
+    {
+        "label": "CustomImageDataset",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.gnn.dataset_utils",
+        "description": "PSRP.problem_solvers.gnn.dataset_utils",
+        "peekOfCode": "class CustomImageDataset(Dataset):\n    def __init__(self, dataset_dir,\n                 generation_function,\n                 parameters_dict):\n      self.dataset_dir = dataset_dir\n      self.parameters_dict = parameters_dict\n      self.model_for_cpsat = generate_dataset(generation_function,\n                 parameters_dict,\n                 dataset_dir = dataset_dir,\n                 del_previous_dir=True)",
+        "detail": "PSRP.problem_solvers.gnn.dataset_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_graph_dict",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.dataset_utils",
+        "description": "PSRP.problem_solvers.gnn.dataset_utils",
+        "peekOfCode": "def get_graph_dict(synth_data, parameters_dict):\n    data_builder = DataBuilder_MPPSRP_Simple(synth_data[\"weight_matrix\"],\n                                         distance_multiplier=1, travel_time_multiplier=60*60,\n                                         planning_horizon=parameters_dict['planning_horizon'],\n                                         safety_level=0.05, max_level=0.95,\n                                         initial_inventory_level=0.5, tank_capacity=100,\n                                         depot_service_time = 0*60, station_service_time=0*60,\n                                         demand=10, products_count=parameters_dict['products_count'],\n                                         k_vehicles=parameters_dict[\"k_vehicles\"],\n                                        compartments=[parameters_dict[\"products_count\"] * [parameters_dict[\"compartment_capacity\"]]],",
+        "detail": "PSRP.problem_solvers.gnn.dataset_utils",
+        "documentation": {}
+    },
+    {
+        "label": "generate_dataset",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.dataset_utils",
+        "description": "PSRP.problem_solvers.gnn.dataset_utils",
+        "peekOfCode": "def generate_dataset(graph_creation_method,\n                     parameters_dict,\n                     dataset_name=None,\n                     dataset_dir='/content/drive/MyDrive/GraphDataset',\n                     del_previous_dir=False):\n  if del_previous_dir:\n    shutil.rmtree(dataset_dir, ignore_errors=True)\n  if not os.path.exists(dataset_dir):\n    os.makedirs(dataset_dir)\n  num_nodes = parameters_dict['num_nodes']",
+        "detail": "PSRP.problem_solvers.gnn.dataset_utils",
+        "documentation": {}
+    },
+    {
+        "label": "create_wheel_noised",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "description": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "peekOfCode": "def create_wheel_noised(num_nodes):\n  graph_generator = GraphGenerator()\n  g = graph_generator.build_graph( num_nodes, graph_type=\"wheel\", layout=\"kamada-kawai\")\n  g = graph_generator.alter_graph( g, shift=(1.3, 1.3), scale=(100.0, 100.0), rotation_angle=0, convert_to_int=True,\n                                  noised_nodes_part=0.8, node_noise_strength=0.2, random_seed=random.randint(0,100000))\n  g = graph_generator.init_edge_weights( g, round_to = 1 )\n  weight_matrix = graph_generator.build_edge_weight_matrix(g, fill_empty_policy =\"shortest\", make_int=True)\n  graph_data = {}\n  graph_data[\"graph\"] = g\n  graph_data[\"weight_matrix\"] = weight_matrix",
+        "detail": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "documentation": {}
+    },
+    {
+        "label": "create_tree_noised",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "description": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "peekOfCode": "def create_tree_noised(num_nodes):\n  graph_generator = GraphGenerator()\n  g = graph_generator.build_graph( num_nodes, graph_type=\"tree\", layout=\"spring\", random_seed=random.randint(0,100000))\n  g = graph_generator.alter_graph( g, shift=(1.0, 1.0), scale=(100.0, 100.0), rotation_angle=0, convert_to_int=True )\n  g = graph_generator.alter_graph( g, shift=(1.0, 1.0), scale=(1.0, 1.0),\n                                  noised_nodes_part=1.0, node_noise_strength=0.1, random_seed=random.randint(0,100000),\n                                  rotation_angle=0, convert_to_int=True )\n  g = graph_generator.alter_graph( g, shift=(1.0, 1.0), scale=(1.0, 1.0),\n                                  noised_nodes_part=0.4, node_noise_strength=0.2, random_seed=random.randint(0,100000),\n                                  rotation_angle=0, convert_to_int=True )",
+        "detail": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "documentation": {}
+    },
+    {
+        "label": "create_grid_noised",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "description": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "peekOfCode": "def create_grid_noised(num_nodes):\n  graph_generator = GraphGenerator()\n  g = graph_generator.build_graph( num_nodes, graph_type=\"cube\", layout=\"kamada-kawai\" )\n  g = graph_generator.alter_graph( g, shift=(1.0, 1.0), scale=(100.0, 100.0), rotation_angle=0, convert_to_int=True )\n  g = graph_generator.alter_graph( g, shift=(1.0, 1.0), scale=(1.0, 1.0),\n                                  noised_nodes_part=1.0, node_noise_strength=0.05, random_seed=45,\n                                  rotation_angle=0, convert_to_int=True )\n  g = graph_generator.alter_graph( g, shift=(1.0, 1.0), scale=(1.0, 1.0),\n                                  noised_nodes_part=0.2, node_noise_strength=0.2, random_seed=46,\n                                  rotation_angle=0, convert_to_int=True )",
+        "detail": "PSRP.problem_solvers.gnn.graph_generation_functions",
+        "documentation": {}
+    },
+    {
+        "label": "draw_paths",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.utils",
+        "description": "PSRP.problem_solvers.gnn.utils",
+        "peekOfCode": "def draw_paths(data_nn, routes):\n  G = nx.Graph()\n  edges = []\n  for r in routes:\n      route_edges = [(r[n],r[n+1]) for n in range(len(r)-1)]\n      G.add_nodes_from(r)\n      G.add_edges_from(route_edges)\n      edges.append(route_edges)\n  print(\"Graph has %d nodes with %d edges\" %(G.number_of_nodes(),\n  G.number_of_edges()))",
+        "detail": "PSRP.problem_solvers.gnn.utils",
+        "documentation": {}
+    },
+    {
+        "label": "divide_to_paths_nn",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.utils",
+        "description": "PSRP.problem_solvers.gnn.utils",
+        "peekOfCode": "def divide_to_paths_nn(actions):\n  particular_value = 0\n  result = []\n  temp_list = []\n  for i in actions:\n      if i == particular_value:\n          temp_list.append(i)\n          result.append(temp_list)\n          temp_list.insert(0,0)\n          temp_list = []",
+        "detail": "PSRP.problem_solvers.gnn.utils",
+        "documentation": {}
+    },
+    {
+        "label": "divide_to_path_cpsat",
+        "kind": 2,
+        "importPath": "PSRP.problem_solvers.gnn.utils",
+        "description": "PSRP.problem_solvers.gnn.utils",
+        "peekOfCode": "def divide_to_path_cpsat(routes_schedule):\n  result_paths = []\n  for car in routes_schedule[0]:\n    for e in car:\n      result_paths.append(e[0])\n  return result_paths",
+        "detail": "PSRP.problem_solvers.gnn.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Solution_MPPSRP_CPSAT",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.Solution_MPPSRP_CPSAT",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.Solution_MPPSRP_CPSAT",
+        "peekOfCode": "class Solution_MPPSRP_CPSAT():\n    def __init__(self, task, solver):\n        self.n_nodes = len(task.data_model[\"distance_matrix\"])\n        self.k_vehicles = task.data_model[\"k_vehicles\"]\n        self.vehicle_compartments = task.data_model[\"vehicle_compartments\"]\n        self.max_trips_per_day = task.other_parameters[\"max_trips_per_day\"]\n        self.planning_horizon = task.other_parameters[\"planning_horizon\"]\n        self.products = task.other_parameters[\"P\"]\n        self.safety_levels = task.data_model[\"station_data\"][:, 2]\n        self.capacities = task.data_model[\"station_data\"][:, 3]",
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.Solution_MPPSRP_CPSAT",
+        "documentation": {}
+    },
+    {
+        "label": "TaskBuilder_MPPSRP_FullMILP_CPSAT",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.TaskBuilder_MPPSRP_FullMILP_CPSAT",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.TaskBuilder_MPPSRP_FullMILP_CPSAT",
+        "peekOfCode": "class TaskBuilder_MPPSRP_FullMILP_CPSAT():\n    def __init__(self, max_trips_per_day=10, verbose=True):\n        \"\"\"\n        Builder for building an MP-PSRP task in the Boers Full MILP formulation (p.34).\n        \"\"\"\n        self.max_trips_per_day = max_trips_per_day\n        self.verbose = verbose\n        pass\n    def build_task(self, data_model, task_id=0):\n        task = Task_MPPSRP_CPSAT( data_model=data_model,",
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.TaskBuilder_MPPSRP_FullMILP_CPSAT",
+        "documentation": {}
+    },
+    {
+        "label": "TaskSolver_MPPSRP_CPSAT",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.TaskSolver_MPPSRP_CPSAT",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.TaskSolver_MPPSRP_CPSAT",
+        "peekOfCode": "class TaskSolver_MPPSRP_CPSAT():\n    def __init__(self, cache_dir=None,\n                 cache_all_feasible_solutions=False,\n                 solution_prefix=None,\n                 time_limit_milliseconds = None):\n        self.solver = cp_model.CpSolver()\n        self.cache_dir = cache_dir\n        self.solution_prefix = solution_prefix\n        self.cache_all_feasible_solutions = cache_all_feasible_solutions\n        self.time_limit_milliseconds = time_limit_milliseconds",
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.TaskSolver_MPPSRP_CPSAT",
+        "documentation": {}
+    },
+    {
+        "label": "Task_MPPSRP_CPSAT",
+        "kind": 6,
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.Task_MPPSRP_CPSAT",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.Task_MPPSRP_CPSAT",
+        "peekOfCode": "class Task_MPPSRP_CPSAT():\n    def __init__(self, data_model, task_id):\n        self.data_model = data_model\n        self.task_id = task_id\n        self.solver_name = \"CP-SAT\"\n        self.model = cp_model.CpModel( )\n        self.variables = {}\n        self.other_parameters = {}\n        self.station_data_dict = {}\n        self.nodes_count = len(data_model[\"distance_matrix\"])",
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.Task_MPPSRP_CPSAT",
+        "documentation": {}
+    },
+    {
+        "label": "statuses_dict",
+        "kind": 5,
+        "importPath": "PSRP.problem_solvers.mppsrp.cpsat.utils",
+        "description": "PSRP.problem_solvers.mppsrp.cpsat.utils",
+        "peekOfCode": "statuses_dict = {}\nstatuses_dict[ UNKNOWN ] = \"UNKNOWN\"\nstatuses_dict[ MODEL_INVALID ] = \"MODEL_INVALID\"\nstatuses_dict[ FEASIBLE ] = \"FEASIBLE\"\nstatuses_dict[ INFEASIBLE ] = \"INFEASIBLE\"\nstatuses_dict[ OPTIMAL ] = \"OPTIMAL\"",
+        "detail": "PSRP.problem_solvers.mppsrp.cpsat.utils",
+        "documentation": {}
+    },
+    {
+        "label": "models_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "models_dir = \"models\"\nif not Path( models_dir ).exists():\n    Path( models_dir ).mkdir(parents=True, exist_ok=True)\ndata_dir = 'data'\nif not Path( data_dir ).exists():\n    Path( data_dir ).mkdir(parents=True, exist_ok=True)\nraw_dir = os.path.join( data_dir, \"raw\" )\nif not Path( raw_dir ).exists():\n    Path( raw_dir ).mkdir(parents=True, exist_ok=True)\ngraphs_dir = os.path.join( raw_dir, \"graphs\" )",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "data_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "data_dir = 'data'\nif not Path( data_dir ).exists():\n    Path( data_dir ).mkdir(parents=True, exist_ok=True)\nraw_dir = os.path.join( data_dir, \"raw\" )\nif not Path( raw_dir ).exists():\n    Path( raw_dir ).mkdir(parents=True, exist_ok=True)\ngraphs_dir = os.path.join( raw_dir, \"graphs\" )\nif not Path( graphs_dir ).exists():\n    Path( graphs_dir ).mkdir(parents=True, exist_ok=True)\nsynthetic_tasks_dir = os.path.join( raw_dir, \"synthetic_tasks\" )",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "raw_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "raw_dir = os.path.join( data_dir, \"raw\" )\nif not Path( raw_dir ).exists():\n    Path( raw_dir ).mkdir(parents=True, exist_ok=True)\ngraphs_dir = os.path.join( raw_dir, \"graphs\" )\nif not Path( graphs_dir ).exists():\n    Path( graphs_dir ).mkdir(parents=True, exist_ok=True)\nsynthetic_tasks_dir = os.path.join( raw_dir, \"synthetic_tasks\" )\nif not Path( synthetic_tasks_dir ).exists():\n    Path( synthetic_tasks_dir ).mkdir(parents=True, exist_ok=True)\nlog_dir = os.path.join( data_dir, \"logs\" )",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "graphs_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "graphs_dir = os.path.join( raw_dir, \"graphs\" )\nif not Path( graphs_dir ).exists():\n    Path( graphs_dir ).mkdir(parents=True, exist_ok=True)\nsynthetic_tasks_dir = os.path.join( raw_dir, \"synthetic_tasks\" )\nif not Path( synthetic_tasks_dir ).exists():\n    Path( synthetic_tasks_dir ).mkdir(parents=True, exist_ok=True)\nlog_dir = os.path.join( data_dir, \"logs\" )\nif not Path( log_dir ).exists():\n    Path( log_dir ).mkdir(parents=True, exist_ok=True)\nimages_dir = os.path.join( raw_dir, \"images\" )",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "synthetic_tasks_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "synthetic_tasks_dir = os.path.join( raw_dir, \"synthetic_tasks\" )\nif not Path( synthetic_tasks_dir ).exists():\n    Path( synthetic_tasks_dir ).mkdir(parents=True, exist_ok=True)\nlog_dir = os.path.join( data_dir, \"logs\" )\nif not Path( log_dir ).exists():\n    Path( log_dir ).mkdir(parents=True, exist_ok=True)\nimages_dir = os.path.join( raw_dir, \"images\" )\nif not Path( images_dir ).exists():\n    Path( images_dir ).mkdir(parents=True, exist_ok=True)\ninterim_dir = os.path.join( data_dir, \"interim\" )",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "log_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "log_dir = os.path.join( data_dir, \"logs\" )\nif not Path( log_dir ).exists():\n    Path( log_dir ).mkdir(parents=True, exist_ok=True)\nimages_dir = os.path.join( raw_dir, \"images\" )\nif not Path( images_dir ).exists():\n    Path( images_dir ).mkdir(parents=True, exist_ok=True)\ninterim_dir = os.path.join( data_dir, \"interim\" )\nif not Path( interim_dir ).exists():\n    Path( interim_dir ).mkdir(parents=True, exist_ok=True)\nresult_dir = os.path.join( data_dir, \"result\" )",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "images_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "images_dir = os.path.join( raw_dir, \"images\" )\nif not Path( images_dir ).exists():\n    Path( images_dir ).mkdir(parents=True, exist_ok=True)\ninterim_dir = os.path.join( data_dir, \"interim\" )\nif not Path( interim_dir ).exists():\n    Path( interim_dir ).mkdir(parents=True, exist_ok=True)\nresult_dir = os.path.join( data_dir, \"result\" )\nif not Path( result_dir ).exists():\n    Path( result_dir ).mkdir(parents=True, exist_ok=True)",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "interim_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "interim_dir = os.path.join( data_dir, \"interim\" )\nif not Path( interim_dir ).exists():\n    Path( interim_dir ).mkdir(parents=True, exist_ok=True)\nresult_dir = os.path.join( data_dir, \"result\" )\nif not Path( result_dir ).exists():\n    Path( result_dir ).mkdir(parents=True, exist_ok=True)",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "result_dir",
+        "kind": 5,
+        "importPath": "PSRP.paths_config",
+        "description": "PSRP.paths_config",
+        "peekOfCode": "result_dir = os.path.join( data_dir, \"result\" )\nif not Path( result_dir ).exists():\n    Path( result_dir ).mkdir(parents=True, exist_ok=True)",
+        "detail": "PSRP.paths_config",
+        "documentation": {}
+    },
+    {
+        "label": "save",
+        "kind": 2,
+        "importPath": "PSRP.utils",
+        "description": "PSRP.utils",
+        "peekOfCode": "def save(obj, path, verbose=False):\n    if verbose:\n        print(\"Saving object to {}\".format(path))\n    with open(path, \"wb\") as obj_file:\n        pickle.dump( obj, obj_file, protocol=pickle.HIGHEST_PROTOCOL )\n    if verbose:\n        print(\"Object saved to {}\".format(path))\n    pass\ndef load(path, verbose=False):\n    if verbose:",
+        "detail": "PSRP.utils",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "kind": 2,
+        "importPath": "PSRP.utils",
+        "description": "PSRP.utils",
+        "peekOfCode": "def load(path, verbose=False):\n    if verbose:\n        print(\"Loading object from {}\".format(path))\n    with open(path, \"rb\") as obj_file:\n        obj = pickle.load(obj_file)\n    if verbose:\n        print(\"Object loaded from {}\".format(path))\n    return obj",
+        "detail": "PSRP.utils",
+        "documentation": {}
+    }
+]
