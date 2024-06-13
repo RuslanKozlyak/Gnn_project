@@ -35,8 +35,7 @@ def train(
 
             loss_history.append(loss.mean().item())
 
-            normalization_coef = (env.num_nodes - env.num_depots) * env.days_count *  env.products_count
-            dry_runs_loss = 10* env.loss_dry_runs 
+            dry_runs_loss = 10 * env.loss_dry_runs 
 
             dry_runs_history.append(dry_runs_loss.mean().item())
             dist_history.append(-1*loss_m.mean().item())

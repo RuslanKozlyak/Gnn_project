@@ -27,12 +27,21 @@ class GraphDecoder(nn.Module):
             batch_first=True,
         )
 
+        self.attention_load = nn.MultiheadAttention(
+            embed_dim=3 * emb_dim,
+            num_heads=num_heads,
+            kdim=k_dim,
+            vdim=v_dim,
+            batch_first=True,
+        )
+        self._att_output_load = nn.Linear(emb_dim * 3, products_count, bias=False)
+
         self._kp = nn.Linear(emb_dim, emb_dim, bias=False)
         self._att_output = nn.Linear(emb_dim * 3, emb_dim, bias=False)
-        self._load = nn.Linear(emb_dim, products_count)
 
         # project in context of [graph_emb, ]
         self._context_proj = nn.Linear(emb_dim * 2 + 2, emb_dim * 3, bias=False)
+        self.sig = nn.Sigmoid()
 
         self.first_ = None
         self.last_ = None
@@ -67,20 +76,19 @@ class GraphDecoder(nn.Module):
 
             vehicles, cur_remaining_time = global_features
 
-            context = torch.cat([graph_emb, self.last_, vehicles[:,None,None],cur_remaining_time[:,None,None]], -1)
+            context = torch.cat([graph_emb, self.last_, vehicles[:,None,None], cur_remaining_time[:,None,None]], -1)
 
             context = self._context_proj(context)
-            
-
-        load_pecent = self._load(graph_emb)
-        load_percent = torch.sigmoid(load_pecent).squeeze(-1).detach()
 
         attn_mask = mask.repeat(self.num_heads, 1).unsqueeze(1)
 
         q, _ = self.attention(context, node_embs, node_embs, attn_mask=attn_mask)
+        
+        l,_ = self.attention_load(graph_emb, node_embs, node_embs, attn_mask=attn_mask)
+        l = self._att_output_load(l)
+        load_percent = self.sig(l).squeeze(-1)
 
         q = self._att_output(q)
-
 
         u = torch.tanh(q.bmm(k.transpose(-2, -1)) / emb_dim ** 0.5) * C
         # dc = torch.einsum('ijk->ij', temp_demand / (temp_capacity + 0.001)).unsqueeze(1)

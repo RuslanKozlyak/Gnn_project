@@ -58,6 +58,7 @@ class IRPEnv_Custom:
 
         # play the game till done
         self.actions_list = []
+        self.percent_list = []
         self.avarage_stocks = defaultdict(float)
         self.dry_runs_dict = defaultdict(int)
         self.actions_daily = defaultdict(list)
@@ -95,11 +96,19 @@ class IRPEnv_Custom:
         # selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
         # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0)
         # self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
-        selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0)
-        self.capacity_reduction = selected_temp_load * load_percent.squeeze(1)
-        
+
+        full_fill_up = self.max_capacities - self.init_capacities
+        selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
+        selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) * load_percent.squeeze(1)
+        self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
 
         self.init_capacities[np.arange(self.batch_size), actions.T] += self.capacity_reduction
+
+        # print(f'load_percent {np.round(load_percent[0],3)}')
+        # print(f'actions {actions[0]}')
+        # print(f'temp load before {np.round(self.temp_load[0],3)}')
+        # print(f'capacity_reduction {np.round(self.capacity_reduction[0],3)}')
+        # print(f'init_capacities {np.round(self.init_capacities[0],3)}')
 
         # cause on each station different normalization for load, changin load by percent
         percent = self.capacity_reduction / self.load[np.arange(self.batch_size),actions.T,:].squeeze(0)
@@ -108,6 +117,8 @@ class IRPEnv_Custom:
 
         self.temp_load -= percent_reduction
         self.temp_load[self.temp_load <= 0.01] = 0
+        # print(f'temp load after {np.round(self.temp_load[0],3)}')
+        # print()
 
         vehicle_in_depot = np.where(actions == self.depots)[0]
         self.temp_load[vehicle_in_depot] = self.load[vehicle_in_depot]
@@ -128,15 +139,16 @@ class IRPEnv_Custom:
         self.cur_day = np.clip(self.cur_day, 0, self.days_count)
         done = self.is_done()
 
-        self.calc_step_kpis(actions)
+        self.calc_step_kpis(actions, load_percent)
 
         return self.get_loss(traversed_edges), self.get_kpis(), done
 
     def get_loss(self, traversed_edges):
         return -self.get_distances(traversed_edges)
 
-    def calc_step_kpis(self, actions):
+    def calc_step_kpis(self, actions, load_percent):
         self.actions_list.append(actions)
+        self.percent_list.append(load_percent)
 
         dry_runs = np.einsum('ijk -> i', (self.init_capacities < self.min_capacities).astype(int))
 
@@ -159,6 +171,7 @@ class IRPEnv_Custom:
 
         kpi = {
             'actions_list':self.actions_list,
+            'load_percents': self.percent_list,
             'actions_daily':self.actions_daily,
             'avarage_stocks':self.avarage_stocks,
             'dry_runs':self.dry_runs_dict,
