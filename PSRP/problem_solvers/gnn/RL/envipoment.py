@@ -1,4 +1,5 @@
 from collections import defaultdict
+from json import load
 from typing import Tuple
 from matplotlib.pylab import f
 import numpy as np
@@ -68,7 +69,7 @@ class IRPEnv_Custom:
         self.possible_action_time = cur_to_any_time + self.service_times + self.dist_to_depot
         self.temp_load = self.load.copy()
         
-    def step(self, actions: np.ndarray):
+    def step(self, actions: np.ndarray, load_percent: np.ndarray) -> Tuple[np.ndarray, dict, bool]:
         
         traversed_edges = np.hstack([self.current_location, actions]).astype(int)
 
@@ -90,10 +91,13 @@ class IRPEnv_Custom:
         self.possible_action_time = cur_to_any_time + self.service_times + self.dist_to_depot
 
         # update load of each vehicle
-        full_fill_up = self.max_capacities - self.init_capacities
-        selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
+        # full_fill_up = self.max_capacities - self.init_capacities
+        # selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
+        # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0)
+        # self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
         selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0)
-        self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
+        self.capacity_reduction = selected_temp_load * load_percent.squeeze(1)
+        
 
         self.init_capacities[np.arange(self.batch_size), actions.T] += self.capacity_reduction
 
@@ -101,6 +105,7 @@ class IRPEnv_Custom:
         percent = self.capacity_reduction / self.load[np.arange(self.batch_size),actions.T,:].squeeze(0)
         percent = np.expand_dims(percent, axis=1)
         percent_reduction = self.load * percent
+
         self.temp_load -= percent_reduction
         self.temp_load[self.temp_load <= 0.01] = 0
 

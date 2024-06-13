@@ -29,6 +29,7 @@ class GraphDecoder(nn.Module):
 
         self._kp = nn.Linear(emb_dim, emb_dim, bias=False)
         self._att_output = nn.Linear(emb_dim * 3, emb_dim, bias=False)
+        self._load = nn.Linear(emb_dim, products_count)
 
         # project in context of [graph_emb, ]
         self._context_proj = nn.Linear(emb_dim * 2 + 2, emb_dim * 3, bias=False)
@@ -69,7 +70,10 @@ class GraphDecoder(nn.Module):
             context = torch.cat([graph_emb, self.last_, vehicles[:,None,None],cur_remaining_time[:,None,None]], -1)
 
             context = self._context_proj(context)
+            
 
+        load_pecent = self._load(graph_emb)
+        load_percent = torch.sigmoid(load_pecent).squeeze(-1).detach()
 
         attn_mask = mask.repeat(self.num_heads, 1).unsqueeze(1)
 
@@ -99,7 +103,7 @@ class GraphDecoder(nn.Module):
             self.first_ = self.last_
             self.first_step = False
 
-        return nn_idx, log_prob
+        return nn_idx, load_percent, log_prob
 
     def reset(self):
         self.first_ = None

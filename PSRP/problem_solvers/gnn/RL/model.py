@@ -29,7 +29,7 @@ class IRPModel(nn.Module):
             num_heads=num_heads,
         )
         self.decoder = GraphDecoder(
-            emb_dim=emb_dim, num_heads=8, v_dim=emb_dim, k_dim=emb_dim, products_count=int((node_dim-2)/4)
+            emb_dim=emb_dim, num_heads=8, v_dim=emb_dim, k_dim=emb_dim, products_count=int((node_dim-2)/3)
         )
 
         self.model = lambda x, mask, rollout: self.decoder(
@@ -52,22 +52,21 @@ class IRPModel(nn.Module):
               x=local_features, depot_mask=depots.bool()
             )
 
-            actions, log_prob = self.decoder(
+            actions, load_percent, log_prob = self.decoder(
                 node_embs=emb,
                 mask=mask,
                 global_features=global_features,
                 rollout=rollout,
             )
 
-            loss, kpis, done = env.step(actions.cpu().numpy())
+            loss, kpis, done = env.step(actions.cpu().numpy(), load_percent.cpu().numpy())
 
             acc_log_prob += log_prob.squeeze().to(self.device)
             acc_dist_loss += torch.tensor(loss, dtype=torch.float, device=self.device)
 
             local_features, global_features, mask, depots = env.get_state()
 
-        normalization_coef = (env.num_nodes - env.num_depots) * env.days_count *  env.products_count
-        dry_runs_loss = env.loss_dry_runs #/ normalization_coef
+        dry_runs_loss = env.loss_dry_runs 
         dry_runs_loss = np.clip(dry_runs_loss, 0, 3)
         dry_runs_loss = torch.tensor(dry_runs_loss, dtype=torch.float, device=self.device)
 
