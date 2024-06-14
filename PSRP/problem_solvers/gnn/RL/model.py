@@ -59,19 +59,19 @@ class IRPModel(nn.Module):
                 rollout=rollout,
             )
 
-            loss, kpis, done = env.step(actions.cpu().numpy(), load_percent.detach().cpu().numpy())
+            loss, kpis, done = env.step(actions.cpu().numpy(), None)#load_percent.detach().cpu().numpy()
 
             acc_log_prob += log_prob.squeeze().to(self.device)
-            dry_runs_loss = env.loss_dry_runs 
-            # dry_runs_loss = np.clip(dry_runs_loss, 0, 3)
-            dry_runs_loss = torch.tensor(dry_runs_loss, dtype=torch.float, device=self.device)
-            acc_dist_loss += torch.tensor(loss, dtype=torch.float, device=self.device) - 10 *  dry_runs_loss
+
+            acc_dist_loss += torch.tensor(loss, dtype=torch.float, device=self.device) 
 
             local_features, global_features, mask, depots = env.get_state()
 
         
-
-        acc_loss = acc_dist_loss
+        dry_runs_loss = env.loss_dry_runs 
+        # dry_runs_loss = np.clip(dry_runs_loss, 0, 3)
+        dry_runs_loss = torch.tensor(dry_runs_loss, dtype=torch.float, device=self.device)
+        acc_loss = acc_dist_loss - 10 *  dry_runs_loss
 
         self.decoder.reset()
 
