@@ -92,16 +92,19 @@ class IRPEnv_Custom:
         self.possible_action_time = cur_to_any_time + self.service_times + self.dist_to_depot
 
         # update load of each vehicle
+        # load for 3 day further
+        # days_count = 3
+        # full_fill_up = self.max_capacities - self.init_capacities
+        # selected_delivery = self.daily_demands[np.arange(self.batch_size), :days_count, actions.T, :].squeeze(0).sum(axis=1) #full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
+        # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0)
+        # self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
+
+        # load by percent
         full_fill_up = self.max_capacities - self.init_capacities
         selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
-        selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0)
-        self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
-
-        # full_fill_up = self.max_capacities - self.init_capacities
-        # selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
-        # # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) * load_percent.squeeze(1)
+        selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) * load_percent.squeeze(1)
         # selected_temp_load = self.max_capacities[np.arange(self.batch_size), actions.T,:].squeeze(0) * 0.3
-        # self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
+        self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
 
         self.init_capacities[np.arange(self.batch_size), actions.T] += self.capacity_reduction
 

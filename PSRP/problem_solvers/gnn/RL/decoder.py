@@ -27,14 +27,14 @@ class GraphDecoder(nn.Module):
             batch_first=True,
         )
 
-        # self.attention_load = nn.MultiheadAttention(
-        #     embed_dim=3 * emb_dim,
-        #     num_heads=num_heads,
-        #     kdim=k_dim,
-        #     vdim=v_dim,
-        #     batch_first=True,
-        # )
-        # self._att_output_load = nn.Linear(emb_dim, products_count, bias=False)
+        self.attention_load = nn.MultiheadAttention(
+            embed_dim=emb_dim,
+            num_heads=num_heads,
+            kdim=k_dim,
+            vdim=v_dim,
+            batch_first=True,
+        )
+        self._att_output_load = nn.Linear(emb_dim, products_count, bias=False)
 
         self._kp = nn.Linear(emb_dim, emb_dim, bias=False)
         self._att_output = nn.Linear(emb_dim*3, emb_dim, bias=False)
@@ -84,9 +84,9 @@ class GraphDecoder(nn.Module):
 
         q, _ = self.attention(context, node_embs, node_embs, attn_mask=attn_mask)
         
-        # l,_ = self.attention_load(graph_emb, node_embs, node_embs, attn_mask=attn_mask)
-        # l = self._att_output_load(l)
-        # load_percent = self.sig(l).squeeze(-1)
+        l,_ = self.attention_load(self.last_, node_embs, node_embs, attn_mask=attn_mask)
+        l = self._att_output_load(l)
+        load_percent = self.sig(l).squeeze(-1)
 
         q = self._att_output(q)
 
@@ -111,7 +111,7 @@ class GraphDecoder(nn.Module):
             self.first_ = self.last_
             self.first_step = False
 
-        return nn_idx, None, log_prob
+        return nn_idx, load_percent, log_prob
 
     def reset(self):
         self.first_ = None

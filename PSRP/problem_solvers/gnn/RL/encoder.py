@@ -82,8 +82,6 @@ class GraphDemandEncoder(GraphEncoder):
 
         temp[depot_mask] = m
 
-
-
         temp[~depot_mask] = out[:, num_depot:, :].reshape(
             (batch_size * (num_nodes - num_depot)), self.emb_dim
         )
