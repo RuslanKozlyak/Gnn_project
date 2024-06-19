@@ -59,7 +59,7 @@ class IRPModel(nn.Module):
                 rollout=rollout,
             )
 
-            loss, kpis, done = env.step(actions.cpu().numpy(), load_percent.detach().cpu().numpy())
+            loss, kpis, done = env.step(actions.cpu().numpy(), None)#load_percent.detach().cpu().numpy()
 
             acc_log_prob += log_prob.squeeze().to(self.device)
 
