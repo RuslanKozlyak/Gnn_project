@@ -102,8 +102,8 @@ class IRPEnv_Custom:
         # load by percent
         full_fill_up = self.max_capacities - self.init_capacities
         selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
-        selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) * load_percent.squeeze(1)
-        # selected_temp_load = self.max_capacities[np.arange(self.batch_size), actions.T,:].squeeze(0) * 0.3
+        # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) * load_percent.squeeze(1)
+        selected_temp_load = self.max_capacities[np.arange(self.batch_size), actions.T,:].squeeze(0) 
         self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
 
         self.init_capacities[np.arange(self.batch_size), actions.T] += self.capacity_reduction

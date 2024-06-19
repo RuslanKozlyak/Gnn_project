@@ -214,19 +214,20 @@ class TaskBuilder_MPPSRP_FullMILP_CPSAT():
 
         # constraint (3)
         q = task.variables["q"]
+        z = task.variables["z"]
+        w = task.variables["w"]
         for t in range( planning_horizon ):
             for station_data_key in station_data_dict.keys():
                 i = station_data_key[0]
                 p = station_data_key[1]
                 p_v = task.other_parameters["P_virtual_ids"][p]
                 tank_capacity_i = station_data_dict[(i, p)]["tank_capacity"]
-                delivered_q = [ q[(t, k, r, i, p_v, m)]
-                                for k in range( task.data_model["k_vehicles"] )
-                                for m in range( len(task.data_model["vehicle_compartments"][k]) )
-                                for r in task.other_parameters["R"]
-                            ]
-                # Boers doesn't define L in <= L * tank_capacity_i
-                task.model.Add( I[(i, p_v, t-1)] + sum( delivered_q ) <= tank_capacity_i )
+                for k in range( task.data_model["k_vehicles"] ):
+                    for m in range( len(task.data_model["vehicle_compartments"][k]) ):
+                        for r in task.other_parameters["R"]:
+                            # Boers doesn't define L in <= L * tank_capacity_i
+          
+                            task.model.AddMultiplicationEquality( q[(t, k, r, i, p_v, m)], (tank_capacity_i - I[(i, p_v, t-1)]), z[(k, i, r, t)], w[(p, k, m, r, t)])
 
         # constraint (4)
         for station_data_key in station_data_dict.keys():
