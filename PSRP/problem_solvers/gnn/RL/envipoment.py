@@ -1,5 +1,6 @@
 from collections import defaultdict
 from json import load
+import tempfile
 from typing import Tuple
 from matplotlib.pylab import f
 import numpy as np
@@ -19,8 +20,7 @@ class IRPEnv_Custom:
         self.products_count = parameters_dict['products_count']
         self.k_vehicles = parameters_dict['k_vehicles']
         self.max_trips = parameters_dict['max_trips']
-        self.num_depots= parameters_dict['num_depots']
-        self.max_trips = parameters_dict['max_trips']
+        self.num_depots = parameters_dict['num_depots']
         self.compartment_capacity = parameters_dict['compartment_capacity']
         self.days_count = parameters_dict['planning_horizon']
 
@@ -103,7 +103,7 @@ class IRPEnv_Custom:
         full_fill_up = self.max_capacities - self.init_capacities
         selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
         # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) * load_percent.squeeze(1)
-        selected_temp_load = self.max_capacities[np.arange(self.batch_size), actions.T,:].squeeze(0) 
+        selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) 
         self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
 
         self.init_capacities[np.arange(self.batch_size), actions.T] += self.capacity_reduction
@@ -201,13 +201,14 @@ class IRPEnv_Custom:
                 self.temp_load
             ]
         )
-
+        
         global_features = [
-              torch.tensor(self.vehicles, dtype=torch.float, device=self.device),
-              torch.tensor(self.cur_remaining_time, dtype=torch.float, device=self.device)
+            torch.tensor(self.vehicles, dtype=torch.float, device=self.device)[:,None,None],
+            torch.tensor(self.cur_remaining_time, dtype=torch.float, device=self.device)[:,None,None],
+            torch.tensor(self.cur_day / self.days_count, dtype=torch.float, device=self.device)[:,None,None]
             ]
-        mask = self.generate_mask()
 
+        mask = self.generate_mask()
 
         local_features = torch.tensor(local_features, dtype=torch.float, device=self.device)
         mask = torch.tensor(mask, dtype=torch.float, device=self.device)

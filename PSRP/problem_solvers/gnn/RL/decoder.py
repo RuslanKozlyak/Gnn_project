@@ -35,13 +35,14 @@ class GraphDecoder(nn.Module):
         #     batch_first=True,
         # )
         # self._att_output_load = nn.Linear(emb_dim, products_count, bias=False)
+        # self.sig = nn.Sigmoid()
 
         self._kp = nn.Linear(emb_dim, emb_dim, bias=False)
         self._att_output = nn.Linear(emb_dim*3, emb_dim, bias=False)
 
         # project in context of [graph_emb, ]
-        self._context_proj = nn.Linear(emb_dim * 2 + 2, emb_dim * 3, bias=False)
-        self.sig = nn.Sigmoid()
+        self._context_proj = nn.Linear(emb_dim * 2 + 3, emb_dim * 3, bias=False)
+        
 
         self.first_ = None
         self.last_ = None
@@ -73,10 +74,7 @@ class GraphDecoder(nn.Module):
         if global_features is None:
             context = torch.cat([graph_emb, self.first_, self.last_], -1)
         else:
-
-            vehicles, cur_remaining_time = global_features
-
-            context = torch.cat([graph_emb, self.last_, vehicles[:,None,None], cur_remaining_time[:,None,None]], -1)
+            context = torch.cat([graph_emb, self.last_, *global_features], -1)
 
             context = self._context_proj(context)
 
