@@ -115,7 +115,7 @@ class IRPEnv_Custom:
         # print(f'init_capacities {np.round(self.init_capacities[0],3)}')
 
         # cause on each station different normalization for load, changin load by percent
-        percent = self.capacity_reduction / self.load[np.arange(self.batch_size),actions.T,:].squeeze(0)
+        percent = self.capacity_reduction / self.load[np.arange(self.batch_size), actions.T,:].squeeze(0)
         percent = np.expand_dims(percent, axis=1)
         percent_reduction = self.load * percent
 
@@ -205,7 +205,7 @@ class IRPEnv_Custom:
         global_features = [
             torch.tensor(self.vehicles, dtype=torch.float, device=self.device)[:,None,None],
             torch.tensor(self.cur_remaining_time, dtype=torch.float, device=self.device)[:,None,None],
-            torch.tensor(self.cur_day / self.days_count, dtype=torch.float, device=self.device)[:,None,None]
+            # torch.tensor(self.cur_day / self.days_count, dtype=torch.float, device=self.device)[:,None,None]
             ]
 
         mask = self.generate_mask()

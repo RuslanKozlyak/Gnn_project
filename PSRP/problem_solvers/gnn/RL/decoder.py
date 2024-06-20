@@ -41,7 +41,7 @@ class GraphDecoder(nn.Module):
         self._att_output = nn.Linear(emb_dim*3, emb_dim, bias=False)
 
         # project in context of [graph_emb, ]
-        self._context_proj = nn.Linear(emb_dim * 2 + 3, emb_dim * 3, bias=False)
+        self._context_proj = nn.Linear(emb_dim * 2 + 2, emb_dim * 3, bias=False)
         
 
         self.first_ = None
