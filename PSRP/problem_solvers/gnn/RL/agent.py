@@ -102,7 +102,7 @@ class IRPAgent:
         baseline_model_cost = []
         with torch.no_grad():
             for _ in range(batch_steps):
-                loss, loss_b, _, _ = self.step(env, [False, True])
+                loss, loss_b, _, _ = self.step(env, [True, True])
 
                 current_model_cost.append(loss)
                 baseline_model_cost.append(loss_b)
