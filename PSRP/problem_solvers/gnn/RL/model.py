@@ -70,7 +70,9 @@ class IRPModel(nn.Module):
         
         dry_runs_loss = env.loss_dry_runs 
         # dry_runs_loss = np.clip(dry_runs_loss, 0, 3)
-        dry_runs_loss = 3 * np.log(dry_runs_loss + 1) / np.log(3)
+        normalize_coef = env.num_nodes * env.products_count
+        dry_runs_loss = dry_runs_loss / normalize_coef
+        dry_runs_loss = np.log(dry_runs_loss + 1) / np.log(6) * 10
         dry_runs_loss = torch.tensor(dry_runs_loss, dtype=torch.float, device=self.device)
         acc_loss = acc_dist_loss - dry_runs_loss
 
