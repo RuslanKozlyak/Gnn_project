@@ -226,7 +226,6 @@ class TaskBuilder_MPPSRP_FullMILP_CPSAT():
                     for m in range( len(task.data_model["vehicle_compartments"][k]) ):
                         for r in task.other_parameters["R"]:
                             # Boers doesn't define L in <= L * tank_capacity_i
-          
                             task.model.AddMultiplicationEquality( q[(t, k, r, i, p_v, m)], (tank_capacity_i - I[(i, p_v, t-1)]), z[(k, i, r, t)], w[(p, k, m, r, t)])
 
         # constraint (4)
