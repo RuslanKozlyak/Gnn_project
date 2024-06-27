@@ -6,6 +6,11 @@ from PSRP.data_generators.DataBuilder_MPPSRP_Simple import DataBuilder_MPPSRP_Si
 import networkx as nx
 
 from PSRP.utils import load, save
+import os
+import pandas as pd
+from torch.utils.data import Dataset
+import matplotlib.pyplot as plt
+
 
 def get_graph_dict(synth_data, parameters_dict):
 
@@ -21,7 +26,7 @@ def get_graph_dict(synth_data, parameters_dict):
                                          mean_vehicle_speed=60, vehicle_time_windows=[[9*60*60, 18*60*60]],
                                          noise_initial_inventory=0.0, noise_tank_capacity=0.0,
                                          noise_compartments=0.0, noise_demand=0.0,
-                                         noise_vehicle_time_windows=0.0,
+                                         noise_vehicle_time_windows=0.1,
                                          noise_restrictions = 0.0,
                                          random_seed=45)
 
@@ -83,8 +88,8 @@ def get_graph_dict(synth_data, parameters_dict):
     init_capacities = np.stack(init_capacities, axis=0).T
 
     time_windows = graph_data['vehicle_time_windows']
-    time_deltas = time_windows[:,1] - time_windows[:,0]
-    time_deltas = time_deltas * parameters_dict["planning_horizon"]
+    time_deltas = abs(time_windows[:,1] - time_windows[:,0])
+    # time_deltas = time_deltas * parameters_dict["planning_horizon"]
 
     vehicle_compartments = []
     for i in range(parameters_dict['k_vehicles']):
@@ -97,7 +102,7 @@ def get_graph_dict(synth_data, parameters_dict):
     vehicle_compartments = vehicle_compartments / max_capacities
     node_demand = np.array(plan_horizon_prods) / max_capacities
     load = np.ones((parameters_dict['num_nodes'], parameters_dict['products_count'])) * parameters_dict['compartment_capacity']
-    load = load / max_capacities 
+    load = load / max_capacities
     max_capacities = max_capacities / max_capacities
 
     max_capacities = np.nan_to_num(max_capacities, 0)
@@ -107,16 +112,15 @@ def get_graph_dict(synth_data, parameters_dict):
     load = np.nan_to_num(load, 0)
     node_demand = np.nan_to_num(node_demand, 0)
 
-    days_count = parameters_dict['planning_horizon']
     dummy_day = np.zeros((1, parameters_dict["num_nodes"], parameters_dict["products_count"]))
     daily_demands = np.vstack((node_demand, dummy_day))
 
-    remaining_time = 18*60*60 - 9*60*60
+    normal_working_time = 18*60*60 - 9*60*60
 
     # get and normalize weight matrix
     weight_matrix = graph_data['travel_time_matrix']
-    weight_matrix = np.divide(weight_matrix, remaining_time)
-    service_times = graph_data['service_times'] / remaining_time
+    weight_matrix = np.divide(weight_matrix, normal_working_time)
+    service_times = graph_data['service_times'] / normal_working_time
 
     model_for_nn = {
         'positions':positions,
@@ -163,11 +167,6 @@ def generate_dataset(graph_creation_method,
     save( model_for_nn, Path(dataset_dir, f"{dataset_name}_{idx}.pkl"))
   return model_for_cpsat
 
-import os
-import pandas as pd
-from torch.utils.data import Dataset
-import matplotlib.pyplot as plt
-
 class CustomImageDataset(Dataset):
     def __init__(self, dataset_dir,
                  generation_function,
@@ -184,10 +183,10 @@ class CustomImageDataset(Dataset):
       self.graphs = os.listdir(dataset_dir)
 
     def __len__(self):
-        return len(self.graphs)
+        return self.parameters_dict['num_graphs']
 
     def __getitem__(self, idx):
-        file = self.graphs[idx]
+        file = self.graphs[0]
         graph = load(Path(self.dataset_dir, file))
 
         return graph['positions'],\
@@ -200,4 +199,5 @@ class CustomImageDataset(Dataset):
           graph['min_capacities'],\
           graph['max_capacities'],\
           graph['init_capacities'],\
+          graph['vehicle_compartments'],\
           graph['load']

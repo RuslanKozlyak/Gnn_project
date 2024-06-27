@@ -35,7 +35,7 @@ def train(
 
             loss_history.append(loss.mean().item())
 
-            dry_runs_loss = 10 * env.loss_dry_runs 
+            dry_runs_loss = env.loss_dry_runs 
 
             dry_runs_history.append(dry_runs_loss.mean().item())
             dist_history.append(-1*loss_m.mean().item())

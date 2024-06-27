@@ -29,9 +29,9 @@ class IRPEnv_Custom:
 
         self.positions, self.weight_matrixes, self.daily_demands,\
         self.depots, self.remaining_time,\
-        restriction_matrix, self.service_times,\
+        self.restriction_matrix, self.service_times,\
         self.min_capacities, self.max_capacities,\
-        self.init_capacities, self.load = batch
+        self.init_capacities, self.vehicle_compartments, self.load = batch
 
         self.batch_size = self.positions.shape[0]
 
@@ -44,6 +44,7 @@ class IRPEnv_Custom:
           self.min_capacities = self.min_capacities.numpy()
           self.max_capacities = self.max_capacities.numpy()
           self.init_capacities = self.init_capacities.numpy()
+          self.restriction_matrix = self.restriction_matrix.numpy()
           self.load = self.load.numpy()
           
         self.depots = self.depots.astype(int)
@@ -56,7 +57,6 @@ class IRPEnv_Custom:
         self.vehicles = np.ones(shape=(self.batch_size)) * self.k_vehicles * self.max_trips
         self.demands = self.daily_demands[np.arange(len(self.daily_demands)), self.cur_day.astype(int)]
 
-        # play the game till done
         self.actions_list = []
         self.percent_list = []
         self.avarage_stocks = defaultdict(float)
@@ -95,24 +95,17 @@ class IRPEnv_Custom:
         # load for 3 day further
         # days_count = 3
         # full_fill_up = self.max_capacities - self.init_capacities
-        # selected_delivery = self.daily_demands[np.arange(self.batch_size), :days_count, actions.T, :].squeeze(0).sum(axis=1) #full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
+        # selected_delivery = self.daily_demands[np.arange(self.batch_size), :days_count, actions.T, :].squeeze(0).sum(axis=1)
         # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0)
         # self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
 
         # load by percent
         full_fill_up = self.max_capacities - self.init_capacities
         selected_delivery = full_fill_up[np.arange(self.batch_size), actions.T,:].squeeze(0)
-        # selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) * load_percent.squeeze(1)
         selected_temp_load = self.temp_load[np.arange(self.batch_size), actions.T,:].squeeze(0) 
         self.capacity_reduction = np.minimum(selected_delivery, selected_temp_load)
 
         self.init_capacities[np.arange(self.batch_size), actions.T] += self.capacity_reduction
-
-        # print(f'load_percent {np.round(load_percent[0],3)}')
-        # print(f'actions {actions[0]}')
-        # print(f'temp load before {np.round(self.temp_load[0],3)}')
-        # print(f'capacity_reduction {np.round(self.capacity_reduction[0],3)}')
-        # print(f'init_capacities {np.round(self.init_capacities[0],3)}')
 
         # cause on each station different normalization for load, changin load by percent
         percent = self.capacity_reduction / self.load[np.arange(self.batch_size), actions.T,:].squeeze(0)
@@ -121,8 +114,6 @@ class IRPEnv_Custom:
 
         self.temp_load -= percent_reduction
         self.temp_load[self.temp_load <= 0.01] = 0
-        # print(f'temp load after {np.round(self.temp_load[0],3)}')
-        # print()
 
         vehicle_in_depot = np.where(actions == self.depots)[0]
         self.temp_load[vehicle_in_depot] = self.load[vehicle_in_depot]
@@ -192,19 +183,23 @@ class IRPEnv_Custom:
         depots[np.arange(len(depots)), self.depots.T] = 1
 
         depots = torch.tensor(depots, dtype=torch.float, device=self.device)
-
+        temp_vehicle_index =  (self.vehicles - 1) % self.max_trips
+        temp_vehicle_index = temp_vehicle_index.astype(int)
+        
         local_features = np.dstack(
             [
                 self.positions,
                 self.demands,
                 self.init_capacities - self.min_capacities,
-                self.temp_load
+                self.temp_load,
+                self.restriction_matrix[np.arange(self.batch_size), temp_vehicle_index, :]
             ]
         )
         
         global_features = [
             torch.tensor(self.vehicles, dtype=torch.float, device=self.device)[:,None,None],
             torch.tensor(self.cur_remaining_time, dtype=torch.float, device=self.device)[:,None,None],
+            torch.tensor(self.service_times, dtype=torch.float, device=self.device)[:,None],
             # torch.tensor(self.cur_day / self.days_count, dtype=torch.float, device=self.device)[:,None,None]
             ]
 
@@ -236,6 +231,12 @@ class IRPEnv_Custom:
         # go to base if all nodes filled
         all_filled = np.where(np.all(self.init_capacities == self.max_capacities, axis=1))[0]
         mask[all_filled] |= 1
+
+        # disallow by restriction matrix
+        temp_vehicle_index =  (self.vehicles - 1) % self.max_trips
+        temp_vehicle_index = temp_vehicle_index.astype(int)
+        cur_vehicle_restriction = self.restriction_matrix[np.arange(self.batch_size), temp_vehicle_index]
+        mask |= cur_vehicle_restriction
 
         # force staying on a depot if the graph is solved.
         done_graphs = np.where(self.cur_day == self.days_count)[0]
