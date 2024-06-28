@@ -46,7 +46,6 @@ class IRPModel(nn.Module):
         acc_dist_loss = torch.zeros(size=(local_features.shape[0],), device=self.device)
         acc_log_prob = torch.zeros(size=(local_features.shape[0],), device=self.device)
 
-
         while not done:
             emb = self.encoder(
               x=local_features, depot_mask=depots.bool()
@@ -59,7 +58,7 @@ class IRPModel(nn.Module):
                 rollout=rollout,
             )
 
-            loss, kpis, done = env.step(actions.cpu().numpy(), None)#load_percent.detach().cpu().numpy()
+            loss, kpis, done = env.step(actions, None)#load_percent.detach().cpu().numpy()
 
             acc_log_prob += log_prob.squeeze().to(self.device)
 

@@ -70,7 +70,14 @@ class IRPEnv_Custom:
         self.possible_action_time = cur_to_any_time + self.service_times + self.dist_to_depot
         self.temp_load = self.load.copy()
         
-    def step(self, actions: np.ndarray, load_percent: np.ndarray) -> Tuple[np.ndarray, dict, bool]:
+    def step(self, all_actions: np.ndarray, load_percent: np.ndarray) -> Tuple[np.ndarray, dict, bool]:
+        actions, vehicle_idx, fuel = all_actions
+        actions = actions.cpu().numpy()
+        vehicle_idx = vehicle_idx.cpu().numpy()
+        fuel = fuel.cpu().numpy()
+
+        self.vehicle_idx = vehicle_idx
+        self.fuel = fuel
         
         traversed_edges = np.hstack([self.current_location, actions]).astype(int)
 
@@ -192,14 +199,14 @@ class IRPEnv_Custom:
                 self.demands,
                 self.init_capacities - self.min_capacities,
                 self.temp_load,
-                self.restriction_matrix[np.arange(self.batch_size), temp_vehicle_index, :]
+                # self.restriction_matrix[np.arange(self.batch_size), temp_vehicle_index, :]
             ]
         )
         
         global_features = [
             torch.tensor(self.vehicles, dtype=torch.float, device=self.device)[:,None,None],
             torch.tensor(self.cur_remaining_time, dtype=torch.float, device=self.device)[:,None,None],
-            torch.tensor(self.service_times, dtype=torch.float, device=self.device)[:,None],
+            #torch.tensor(self.service_times, dtype=torch.float, device=self.device)[:,None],
             # torch.tensor(self.cur_day / self.days_count, dtype=torch.float, device=self.device)[:,None,None]
             ]
 
