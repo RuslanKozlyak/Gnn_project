@@ -41,7 +41,7 @@ class GraphDecoder(nn.Module):
         self._att_output = nn.Linear(emb_dim*3, emb_dim, bias=False)
 
         # project in context of [graph_emb, ]
-        self._context_proj = nn.Linear(emb_dim * 2 + 2, emb_dim * 3, bias=False)
+        self._context_proj = nn.Linear(emb_dim * 2 + 3, emb_dim * 3, bias=False)
         
 
         self.first_ = None
@@ -81,10 +81,6 @@ class GraphDecoder(nn.Module):
         attn_mask = mask.repeat(self.num_heads, 1).unsqueeze(1)
 
         q, _ = self.attention(context, node_embs, node_embs, attn_mask=attn_mask)
-        
-        # l,_ = self.attention_load(self.last_, node_embs, node_embs, attn_mask=attn_mask)
-        # l = self._att_output_load(l)
-        # load_percent = self.sig(l).squeeze(-1)
 
         q = self._att_output(q)
 
