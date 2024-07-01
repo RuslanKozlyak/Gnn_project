@@ -1,1 +1,6 @@
 .vscode/PythonImportHelper-v2-Completion.json
+*.pyc 
+PSRP/data_generators/__pycache__/*.pyc
+PSRP/data_generators/__pycache__/*.pyc
+PSRP/problem_solvers/gnn/__pycache__/dataset_utils.cpython-311.pyc
+PSRP/problem_solvers/gnn/RL/__pycache__/agent.cpython-311.pyc

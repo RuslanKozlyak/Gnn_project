@@ -34,6 +34,8 @@ class IRPAgent:
         hidden_dim: int = 512,
         num_attention_layers: int = 3,
         num_heads: int = 8,
+        log_base: int = 6,
+        normalize_loss: bool = False,
         lr: float = 1e-4,
         seed: int = 69,
     ):
@@ -49,6 +51,8 @@ class IRPAgent:
             hidden_dim=hidden_dim,
             num_attention_layers=num_attention_layers,
             num_heads=num_heads,
+            log_base=log_base,
+            normalize_loss=normalize_loss,
         ).to(self.device)
 
         self.target_model = IRPModel(
@@ -58,6 +62,8 @@ class IRPAgent:
             hidden_dim=hidden_dim,
             num_attention_layers=num_attention_layers,
             num_heads=num_heads,
+            log_base=log_base,
+            normalize_loss=normalize_loss,
         ).to(self.device)
 
         self.target_model.load_state_dict(self.model.state_dict())

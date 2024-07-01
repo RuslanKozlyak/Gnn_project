@@ -15,8 +15,12 @@ class IRPModel(nn.Module):
         hidden_dim: int,
         num_attention_layers: int,
         num_heads: int,
+        log_base: int,
+        normalize_loss: bool,
     ):
         super().__init__()
+        self.log_base = log_base
+        self.normalize_loss = normalize_loss
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.node_dim = node_dim
 
@@ -69,10 +73,12 @@ class IRPModel(nn.Module):
 
         
         dry_runs_loss = env.loss_dry_runs 
-        # dry_runs_loss = np.clip(dry_runs_loss, 0, 3)
-        normalize_coef = env.num_nodes * env.products_count * env.days_count
-        dry_runs_loss = dry_runs_loss / normalize_coef
-        dry_runs_loss = np.log(dry_runs_loss + 1) / np.log(6) * 10
+
+        if self.normalize_loss:
+            normalize_coef = env.num_nodes * env.products_count * env.days_count
+            dry_runs_loss = dry_runs_loss / normalize_coef
+
+        dry_runs_loss = np.log(dry_runs_loss + 1) / np.log(self.log_base) * 10
         dry_runs_loss = torch.tensor(dry_runs_loss, dtype=torch.float, device=self.device)
         acc_loss = acc_dist_loss - dry_runs_loss
 
