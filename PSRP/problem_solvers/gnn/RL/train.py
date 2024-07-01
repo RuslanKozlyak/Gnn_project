@@ -11,11 +11,7 @@ def train(
         check_point_dir: str = "./check_points/",
     ):
         epochs = parameters_dict['epochs']
-        k_vehicles = parameters_dict['k_vehicles']
-        max_trips = parameters_dict['max_trips']
         eval_epochs = parameters_dict['eval_epochs']
-        num_nodes = parameters_dict['num_nodes']
-        products_count = parameters_dict['products_count']
 
         start_time = time.time()
 
