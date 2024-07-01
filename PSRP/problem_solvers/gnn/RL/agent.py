@@ -36,6 +36,7 @@ class IRPAgent:
         num_heads: int = 8,
         log_base: int = 6,
         normalize_loss: bool = False,
+        loss_coef:int = 10,
         lr: float = 1e-4,
         seed: int = 69,
     ):
@@ -52,6 +53,7 @@ class IRPAgent:
             num_attention_layers=num_attention_layers,
             num_heads=num_heads,
             log_base=log_base,
+            loss_coef=loss_coef,
             normalize_loss=normalize_loss,
         ).to(self.device)
 
@@ -63,6 +65,7 @@ class IRPAgent:
             num_attention_layers=num_attention_layers,
             num_heads=num_heads,
             log_base=log_base,
+            loss_coef=loss_coef,
             normalize_loss=normalize_loss,
         ).to(self.device)
 
